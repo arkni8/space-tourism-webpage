@@ -1,0 +1,277 @@
+
+body, html {
+    font-size: 100%;
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.accent{
+    display: none;
+    position: absolute;
+    top: calc(3vw + 3vw - 1px);                 /* calc (0.5*height of sidebar + top position distance of sidebar - half the height of accent line) */
+    left: 11vw;
+    right: 55vw;
+    border: 0;
+    border-top: 2px solid white;
+    opacity: 0.25;
+    margin: 0;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    filter: blur(15px);
+    z-index: -1;
+}
+.sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.03);
+    z-index: -1;
+}
+
+/* -------------NOTE - The values of em and rem maybe getting 
+                                        influenced by the html font-size
+                                                         declared in the other css stylesheet in the same document. */
+
+.sidebar a {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 100;
+    letter-spacing: 2.7px;
+    display: flex;
+    align-items: center;
+}
+.imgbrand {
+    min-height: 48px; min-width: 48px;
+    height: 3vw; width: 3vw;
+}
+span {
+    font-weight: 700;
+}
+
+
+                        /* ---------------------- HiDPI screens -------------------------- */
+@media all and (min-width: 1440px) {
+
+    html,body    {
+        font-size: 1vw;
+    }
+    body, .sidebar::before {
+        background-image: url(../assets/technology/background-technology-desktop.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .sidebar::before {
+        margin: -30px -30px;
+    }
+    .sidebar {
+        min-height: 96px;
+        height: 6vw;
+        width: 57vw;
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        right: 0; top: 3vw;
+        transition: visibility .5s;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    label {
+        display: none;
+    }
+    .sidebar a:nth-last-child(1) {
+        margin-left: 8vw;
+    }
+    .sidebar a:first-child {
+        margin-right: 8vw;
+    }
+    .imgbrand {
+        position: absolute;
+        left: 3.5vw; top: calc(3vw + 3vw - 1.5vw);
+    }
+    .accent {
+        display: block;
+    }
+    @media all and (max-width: 1600px) {
+        .accent{ 
+            top: calc(48px + 3vw);          /* calc (min_height of sidebar + top position distance of sidebar - half the height of accent line) */
+        }
+        .imgbrand {
+            top: calc(48px + 3vw - 24px);
+        }
+    }
+    .pointers{
+        position: relative;
+        height: 100%;
+        z-index: 20;
+    }
+    .active::after { 
+        position: absolute;
+        left: 0; bottom: 0; right: 0;
+        content: '';
+        border: solid white;
+        border-width: 0 0 0.5vw 0;
+    }
+    .pointers:hover::after{
+        position: absolute;
+        left: 0; bottom: 0; right: 0;
+        content: '';
+        border: solid white;
+        border-width: 0 0 0.5vw 0;
+    }
+}
+
+                                         /* ------------------ Tablet and small laptops ------------------------- */
+@media all and (min-width: 768px) and (max-width: 1439px) {
+
+    html,body {
+        font-size: 100%;
+    }
+
+    body, .sidebar::before {
+      background-image: url(../assets/technology/background-technology-tablet.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .sidebar {
+        min-height: 96px;
+        height: 10vh;
+        width: 60%;        
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        right: 0;
+        transition: width .1s, visibility .5s;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+    }
+    
+    span {
+        display: none;
+    }
+    
+    input[type="checkbox"] { display: none; }
+
+    input[type="checkbox"] ~ .main {
+        z-index: 20;
+    }
+    
+    label {
+        display: none;
+    }
+    .sidebar a:nth-last-child(1) {
+        margin-left: 5vw;
+    }
+    
+    .sidebar a:first-child {
+        margin-right: 5vw;
+    }
+    .imgbrand {
+        position: absolute;
+        left: 4vw; top: calc(5vh - 2.5vh);
+    }  
+    @media all and (height< 980px) {
+        .imgbrand{
+            top: 24px;
+        }
+    }
+    .active::after { 
+        position: absolute;
+        left: 0; bottom: 0; right: 0;
+        content: '';
+        border: solid 0.3vh white;
+    }
+    .pointers{
+        position: relative;
+        height: 100%;
+    }
+
+}
+
+                                            /* -------------Phone screens--------------- */ 
+ @media all and (min-width: 200px) and (max-width: 767px) {
+    
+    html, body{
+        font-size: 16px;
+    }    
+    body, .sidebar::before {
+        background-image: url(../assets/technology/background-technology-mobile.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .sidebar::before {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    label {
+        position: absolute;
+        right: 24px; top: 33px;
+        z-index: 1005;
+    }
+    .sidebar {
+        min-height: 350px;
+        width: 218px;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: left;
+        position: fixed;
+        right: 0; top: 0; bottom: 0;
+        transition: width .5s, visibility .5s;
+        padding-top: 80px;
+        padding-left: 32px;
+        justify-content: flex-end;
+        overflow-x: hidden;
+    }
+    input[type="checkbox"] { display: none; }
+
+    input[type="checkbox"]:checked ~ .sidebar {
+      width: 0;
+      overflow-x: hidden;
+      visibility: collapse;
+    }
+    input[type="checkbox"]:checked ~ .btn-close {
+      display: none;
+    }
+    input[type="checkbox"]:not(:checked) ~ .btn-close {
+        position: fixed;
+      }
+    input[type="checkbox"]:not(:checked) ~ .btn-ham {
+      display: none;
+    }
+    .imgbrand {
+        position: relative;
+        min-height: 40px; min-width: 40px;
+        height:40px; width: 40px;
+        left: 24px; top: 24px;
+    }
+    .pointers p {
+        position: relative;
+        width: 100%;        
+    }
+    .active p::after { 
+        position: absolute;
+        top: 0; bottom: 0; right: 0;
+        content: '';
+        border: solid 0.2vw white;
+    }
+}
+
+
+

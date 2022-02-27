@@ -1,0 +1,252 @@
+.prompt-div {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 100;
+}
+.prompt-div  span {
+    display: inline-block;
+    opacity: 0.2;
+    font-weight: 700;
+}
+.description {
+    color: #D0D6F9;
+    text-transform: uppercase;
+    position: relative;
+    z-index: -2;
+    text-align: center;
+}
+.description h1, .description h2 {
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+}
+
+.description p {
+    line-height: 1.8;
+    font-family: 'Barlow', sans-serif;
+    text-transform: none;
+    margin-bottom: 3vw;
+}
+
+.dot-navigator a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+@media all and (min-width: 1440px) {
+/* --------------------HiDPI screen---------------------- */
+    html {
+        overflow: hidden;
+    }
+    .wrapper {
+        display: block;
+        width: 78vw;
+        margin: 0 auto;
+        /* overflow: hidden; */
+    }
+    .image-container { 
+        display: flex;
+        justify-content: center;
+        width: 28%;
+        margin: 2vw auto 0;
+        border-width: 0 0 1px 0;
+        position: absolute;
+        left: 58vw; bottom: 0; 
+    }
+    .image {
+        object-fit: contain;
+        height: 40vw;
+    }
+    .prompt-div {
+        font-size: 2vw;
+        letter-spacing: 3px;
+        width: 78vw;
+        margin: 12vw 0 auto;
+    }
+    .prompt-div span {
+        margin-right: 2%;
+        font-weight: 700;
+    }
+    .description {
+        margin: 3vw 0 7vw;
+        text-align: start;
+    }
+    .description h1 {
+        margin: 1vw auto;
+        font-size: 4vw;
+    }
+    .description h2 {
+        opacity: 0.6;
+        font-size: 2.2vw;
+        margin: 2vw auto;
+    }
+    .description p {
+        font-size: 1.2vw;
+        padding: 0 0;
+        width: 35vw;
+    }
+    .dot-navigator {
+        height: 3vw;
+        width: 10vw;
+        margin: 0 auto 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        top: 30vw; left: -34vw;
+    }
+    .dot-navigator div {
+        width: 1vw;
+        height: 1vw;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .dot-navigator .current {
+        background-color: white;
+    }
+    @media (aspect-ratio: 8/5) {
+        .description {
+            margin: 9vw 0 7vw;
+        }
+        .dot-navigator {
+            top: 38vw;
+        }
+    }
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+/* --------------tablet and small laptop --------------*/
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container { 
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 2vw auto 0;
+
+        order: 4;
+    }
+    .image {
+        object-fit: contain;
+        height: 60vw;
+        border: solid rgb(255, 255, 255, .1);
+        border-width: 0 0 2px 0;
+        /* max-width: 20vw; */
+    }
+    .prompt-div {
+        font-size: 2.5vw;
+        letter-spacing: 3px;
+        width: 90vw;
+        margin: 15vw auto auto;
+        order: 1;
+    }
+    .prompt-div  span {
+        margin-right: 2%;
+    }
+    .description {
+        order: 2;
+        margin: 3vw 0 2vw;
+    }
+    .description h1 {
+        margin: 2vw auto;
+        font-size: 5vw;
+    }
+    .description h2 {
+        opacity: 0.6;
+        font-size: 3vw;
+        margin: 2vw auto;
+    }
+    .description p {
+        font-size: 2.5vw;
+        padding: 0 15vw;
+    }
+    .dot-navigator {
+        height: 3vw;
+        width: 20vw;
+        margin: 0 auto 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        order: 3;
+    }
+    .dot-navigator div {
+        width: 1.4vw;
+        height: 1.4vw;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .dot-navigator .current {
+        background-color: white;
+    }
+}
+
+
+@media all and (min-width: 200px) and (max-width: 767px) {
+/* --------------phone specific------------------ */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.image-container { 
+    text-align: center;
+    margin: 10vw auto 1vw;
+    width: 90vw;
+    border: solid rgba(255, 255, 255, 0.1);
+    border-width: 0 0 1px 0;
+}
+.image {
+    object-fit: contain;
+    width: 45vw; 
+    margin-bottom: -3px;
+}
+.prompt-div {
+    margin-top: 10vw;
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 3px;
+}
+.prompt-div  span {
+    margin-right: 4%;
+}
+.dot-navigator {
+    height: 8vw;
+    width: 40vw;
+    margin: 4vw auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.dot-navigator div {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.dot-navigator .current {
+    background-color: white;
+}
+.description {
+    margin: 6vw 0 2vw;
+}
+.description h1 {
+    margin: 2vw auto;
+}
+.description h2 {
+    opacity: 0.6;
+    font-size: 5.4vw;
+    margin: 2vw auto;
+}
+.description p {
+    font-size: 4.3vw;
+    padding: 2vw 6vw;
+}
+/*-------------------------------------*/
+}

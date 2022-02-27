@@ -1,0 +1,258 @@
+.prompt-div {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 100;
+}
+.prompt-div  span {
+    display: inline-block;
+    opacity: 0.2;
+    font-weight: 700;
+}
+
+.image {
+    display: none;
+}
+.description {
+    color: #D0D6F9;
+    text-transform: uppercase;
+    position: relative;
+    z-index: -2;
+    text-align: center;
+}
+.description h1, .description h2 {
+    font-family: 'Bellefair', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+}
+
+.description p {
+    line-height: 1.8;
+    font-family: 'Barlow', sans-serif;
+    text-transform: none;
+    margin-bottom: 3vw;
+}
+
+.dot-navigator a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.dot-navigator div a{
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dot-navigator .current a{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+@media all and (min-width: 1440px) {
+/* --------------------HiDPI screen---------------------- */
+    .wrapper {
+        display: block;
+        width: 78vw;
+        margin: 0 auto;
+    }
+    .image-container { 
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        margin: 2vw auto 0;
+        border-width: 0 0 1px 0;
+        position: absolute;
+        right: 0; top: 12vw;
+    }
+    img.pt {
+        display: block;
+        object-fit: contain;
+        height: 33vw; 
+    }
+    .prompt-div {
+        font-size: 1.7vw;
+        letter-spacing: 3px;
+        width: 78vw;
+        margin: 11vw 0 auto;
+    }
+    .prompt-div span {
+        margin-right: 2%;
+        font-weight: 700;
+    }
+    .description {
+        margin: 11vw 0 7vw 10vw;
+        text-align: start;
+    }
+    .description h1 {
+        margin: 1vw auto;
+        font-size: 4.2vw;
+    }
+    .description h2 {
+        opacity: 0.6;
+        font-size: 1vw;
+        margin: 2vw auto;
+        letter-spacing: 1px;
+    }
+    .description p {
+        font-size: 1.2vw;
+        padding: 0 0;
+        width: 35vw;
+    }
+    .dot-navigator {
+        height: 24vw;
+        width: 5vw;
+        margin: 2vw auto 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 20vw; left: 11vw;
+        font-size: 1.8vw;
+    }
+    .dot-navigator div {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        color: white;
+        border: solid 1px rgb(255, 255, 255,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    @media (aspect-ratio: 8/5) {
+        .description {
+            margin: 13vw 0 7vw 10vw;
+        }
+        .dot-navigator {
+            top: 23vw;
+        }
+    }
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+/* --------------tablet and small laptop --------------*/
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container { 
+        margin: 2vw auto 3vw;
+    }
+    img.ls{
+        display: block;
+        object-fit: contain;
+        width: 100vw; 
+    }
+    .prompt-div {
+        font-size: 2.5vw;
+        letter-spacing: 3px;
+        width: 90vw;
+        margin: 15vw auto auto;
+    }
+    .prompt-div  span {
+        margin-right: 2%;
+    }
+    .description {
+        margin: 5vw 0 2vw;
+    }
+    .description h1 {
+        margin: 2vw auto;
+        font-size: 5.5vw;
+    }
+    .description h2 {
+        opacity: 0.6;
+        font-size: 3vw;
+        margin: 2vw auto;
+    }
+    .description p {
+        font-size: 2.5vw;
+        padding: 0 16vw;
+    }
+    .dot-navigator {
+        height: 5vw;
+        width: 38vw;
+        margin: 2vw auto 3vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .dot-navigator div {
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        color: white;
+        border: solid 1px rgb(255, 255, 255,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media all and (min-width: 200px) and (max-width: 767px) {
+/* --------------phone specific------------------ */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.image-container { 
+    text-align: center;
+    margin: 2vw auto 1vw;
+}
+img.ls{
+    display: block;
+    object-fit: contain;
+    width: 100vw; 
+}
+.prompt-div {
+    margin-top: 10vw;
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 3px;
+}
+.prompt-div  span {
+    margin-right: 4%;
+}
+.dot-navigator {
+    height: 10vw;
+    width: 50vw;
+    margin: 8vw auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* z-index: -2; */
+}
+.dot-navigator div {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    color: white;
+    border: solid 1px rgb(255, 255, 255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    margin: 6vw 0 2vw;
+}
+.description h1 {
+    margin: 2vw auto;
+}
+.description h2 {
+    opacity: 0.6;
+    font-size: 4vw;
+    margin: 2vw auto;
+}
+.description p {
+    font-size: 4.3vw;
+    padding: 2vw 6vw;
+}
+/*-------------------------------------*/
+}
