@@ -65,7 +65,7 @@ Users are able to:
   
   But just planning out the media queries is not enough (which by themselves can be a handful) - there are couple of ways to scale fonts depending on what we are trying to achieve. In my case, I just made it such that my fonts scale continuously regardless of any breakpoint. I use the viewport width to make the fonts bigger or smaller. So when in 4K, the font size is proportionally big; but in 1080p, the fonts are smaller, but they look right because the HTML elements are also smaller. While I have employed this method, other web desginers seem to adopt the breakpoint technique, where they switch font size only after hitting a certain breakpoint.
   
-  The HTML divs and container are the ones which scale continuously with the width of the viewport. They prefer to have their sites overflow in y-direction and have a scroll bar appear to take up the reduced space until a breakpoint hits and the font size reduces.  
+  The HTML divs and container are usually the ones which scale continuously with the width of the viewport. But they prefer to have their sites overflow in y-direction and have a scroll bar appear to take up the reduced space until a breakpoint hits and the font size reduces.  
   There is also the case of resolution scaling because probably 100% of 4K screens have some kind of display scaling enabled which zooms in the viewport, thus bringing down the effective resolution to somewhere around 2K screens. 
   
   It took me a while to wrap my head around this, but I think I understand a little. Although I would like to talk to some page designers to understand their approach too. I think that will help me greatly.
@@ -86,4 +86,4 @@ Tanmaya Biswal
 
 ### Acknowledgments
 
-I would primarily thank Frontend Mentor to giving me a challenge which could push my vision and inspire me to look for ways to implement new techniques anf features that I couldn't have thought about as I started Web development only a month or two ago. This project works like a great stepping stone for me and gives me confidence about what I am able to achieve by myself.
+I would primarily thank Frontend Mentor to giving me a challenge which could push my vision and inspire me to look for ways to implement new techniques and features that I couldn't have thought about as I started Web development only a month or two ago. This project works like a great stepping stone for me and gives me confidence about what I am able to achieve by myself.
