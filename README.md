@@ -11,7 +11,7 @@
   - [Links](#links)
   - [Achievements](#achievements)
   - [Quirks](#quirks)
-- [My process]
+- My process
   - [Some points to discuss](#some-points-to-discuss)
   - [Built with](#built-with)
   - [Further development](#further-development)
