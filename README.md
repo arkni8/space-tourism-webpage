@@ -42,7 +42,7 @@ But first lets go through what I was able to achieve through this challenge.
 
 ## Achievements
 
-Users are be able to:
+Users are able to:
 
 + View the optimal layout for each of the website's pages depending on their device's screen size
 + See hover states for all interactive elements on the page
