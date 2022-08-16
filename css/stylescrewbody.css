@@ -29,6 +29,22 @@
     margin-bottom: 3vw;
 }
 
+.dot-navigator > div {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.dot-navigator div:not([class*="current"])::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%; width: 100%;
+    border-radius: 100%;
+    border: 2px rgba(255, 255, 255, 0.8) solid;
+    animation: zooming 2s ease-out infinite;
+    z-index: -1;
+}
+
 .dot-navigator a{
     display: block;
     height: 100%;
@@ -249,4 +265,15 @@
     padding: 2vw 6vw;
 }
 /*-------------------------------------*/
+}
+
+@keyframes zooming {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
